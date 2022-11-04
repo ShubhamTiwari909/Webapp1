@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env production --mode production",
-    "start:dev": "webpack-dev-server --env development --mode development",
-    "tailwind-dev": "npx tailwindcss -i input.css  -o ./dist/output.css --watch",
-    "tailwind-prod": "npx tailwindcss -i input.css  -o ./dist/output.css --minify"
+    "start:dev": "webpack-dev-server --env development --mode development"
   },
   "author": "",
   "license": "ISC",
