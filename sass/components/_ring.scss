@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+.custom-ring {
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  display: inline-block;
+}
+.ring-purple{
+    @include ring($purple)
+}
+.ring-orange{
+    @include ring($orange)
+}
+.ring-darkyellow{
+    @include ring($darkyellow)
+}
+.ring-cyan{
+    @include ring($cyan)
+}

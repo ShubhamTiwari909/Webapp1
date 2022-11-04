@@ -1,0 +1,65 @@
+[
+    {
+        "id": 0,
+        "title": "Design Language",
+        "source": "Salman Shah",
+        "time": "8:00 PM",
+        "read": 1,
+        "attachments": "",
+        "active": "inactive"
+    },
+    {
+        "id": 1,
+        "title": "Nextmail New Look",
+        "source": "Salman Shah",
+        "time": "11:00 AM",
+        "read": 2,
+        "attachments": "<i class= 'fa-solid fa-paperclip mr-1 self-end text-gray-400 font-semibold'></i>",
+        "active": "inactive"
+    },
+    {
+        "id": 2,
+        "title": "Interview with Shopify",
+        "source": "Aisha Dialo",
+        "time": "12:05 PM",
+        "read": 2,
+        "attachments": "",
+        "active": "inactive"
+    },
+    {
+        "id": 3,
+        "title": "Narcos Season 2",
+        "source": "Netflix",
+        "time": "7:35 PM",
+        "read": 2,
+        "attachments": "",
+        "active": "inactive"
+    },
+    {
+        "id": 4,
+        "title": "Top Stories of the Day",
+        "source": "TechCrunch",
+        "time": "Yesterday",
+        "read": 2,
+        "attachments": "",
+        "active": "inactive"
+    },
+    {
+        "id": 5,
+        "title": "Updates from Keviny",
+        "source": "Goodreads",
+        "time": "Yesterday",
+        "read": 1,
+        "attachments": "",
+        "active": "inactive"
+    },
+    {
+        "id": 6,
+        "title": "Startup 2016",
+        "source": "Infosys",
+        "time": "9 Oct, 16",
+        "read": 2,
+        "attachments": "",
+        "active": "inactive"
+    }
+]

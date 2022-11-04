@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/ffbd6d2f88.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="h-screen overflow-hidden">
+    <header class="grid grid-cols-2 py-4 px-5 md:px-2 bg-slate-700">
+      <div class="flex gap-5">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-orange"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <img id="logo" />
+    </header>
+    <main class="flex">
+      <section class="flex-3 pt-8 pl-7 pb-3 h-144 overflow-auto">
+        <button
+          class="px-5 py-3 rounded-3xl bg-secondary-green text-white flex items-center"
+        >
+          <i class="fa-solid fa-pen-to-square mr-2"></i>
+          Compose
+        </button>
+
+        <p class="mt-5 text-base text-gray-400">MAILBOX</p>
+        <ul class="flex flex-col gap-4 mt-4 text-sm">
+          <li class="text-slate-700 font-semibold">
+            <a href="javascript:void(0)">
+              <i class="fa-solid fa-inbox mr-1"></i>
+              inbox (200)
+            </a>
+          </li>
+          <li class="text-gray-400 font-semibold">
+            <a href="javascript:void(0)">
+              <i class="fa-solid fa-paper-plane mr-1"></i>
+              Sent Mail
+            </a>
+          </li>
+          <li class="text-gray-400 font-semibold flex gap-2 items-center">
+            <a href="javascript:void(0)" class="flex items-center gap-2">
+              <img id="draftlogo" />
+              Drafts
+            </a>
+          </li>
+          <li class="text-gray-400 font-semibold">
+            <a href="javascript:void(0)">
+              <i class="fa-regular fa-trash-can mr-1"></i>
+              Trash (2)
+            </a>
+          </li>
+          <li class="text-gray-400 font-semibold">
+            <a href="javascript:void(0)">
+              <i class="fa-solid fa-paperclip mr-1"></i>
+              Attachments
+            </a>
+          </li>
+          <li class="text-gray-400 font-semibold flex gap-2 items-center">
+            <a href="javascript:void(0)" class="flex items-center gap-2">
+              <img id="morelogo" />
+              More
+            </a>
+          </li>
+        </ul>
+
+        <p class="mt-10 text-base text-gray-400">LISTS</p>
+
+        <ul class="text-sm">
+          <li class="text-gray-400 font-semibold mt-4">
+            <a href="javascript:void(0)"> LinkedIn </a>
+          </li>
+        </ul>
+
+        <p class="mt-10 text-base text-gray-400">LABELS</p>
+
+        <ul class="flex flex-col gap-2 text-sm">
+          <li class="text-bluish-grey font-semibold mt-4">
+            <a href="javascript:void(0)">
+            <span class="custom-ring ring-purple mr-2"></span> Personal (2)
+            </a>
+          </li>
+          <li class="text-slate-700 font-semibold mt-4">
+            <a href="javascript:void(0)">
+            <span class="custom-ring ring-orange mr-2"></span> Clients
+            </a>
+          </li>
+          <li class="text-bluish-grey font-semibold mt-4">
+            <a href="javascript:void(0)">
+            <span class="custom-ring ring-darkyellow mr-2"></span> Work (2)
+            </a>
+          </li>
+          <li class="text-bluish-grey font-semibold mt-4">
+            <a href="javascript:void(0)">
+            <span class="custom-ring ring-cyan mr-2"></span> Friends
+            </a>
+          </li>
+        </ul>
+        <div class="mt-16 flex gap-2">
+          <img id="user-profile-logo" />
+          <div>
+            <a href="javascript:void(0)" class="text-slate-700 text-sm">Christian Bale</a>
+            <a href="javascript:void(0)" class="text-slate-700 text-xs opacity-50">
+              christian.bale@gmaiil.com
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="flex-5 pt-8 bg-gray-100/50 h-144 overflow-auto">
+        <label class="relative block px-7">
+          <span class="sr-only">Search</span>
+          <i
+            class="fa-solid fa-magnifying-glass text-slate-300 absolute inset-y-0 flex items-center pl-5"
+          ></i>
+          <input
+            class="placeholder:text-slate-300 block bg-white w-full border border-slate-300 rounded-full py-2 pl-12 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+            placeholder="Search"
+            type="text"
+            name="search"
+            id="email-search"
+          />
+        </label>
+        <div class="flex justify-between items-center mt-5 px-8">
+          <p class="text-2xl text-slate-700">Inbox</p>
+          <select
+            class="text-sm text-slate-700 bg-transparent outline-none"
+            id="sort-btn"
+          >
+            <option value="0">
+              All Emails <i class="fa-solid fa-angle-down"></i>
+            </option>
+            <option value="1">
+              Sort by:Unread <i class="fa-solid fa-angle-down"></i>
+            </option>
+            <option value="2">
+              Sort by:Read <i class="fa-solid fa-angle-down"></i>
+            </option>
+          </select>
+        </div>
+        <div id="email-links" class="mt-10 flex flex-col gap-10"></div>
+      </section>
+      <section class="flex-8 pl-7 pb-3 h-144 overflow-auto">
+        <div id="text-email"></div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+@mixin ring($color:black) {
+    border:2px solid $color;
+}
+
+@mixin dot($color:black) {
+    border: solid 1px $color;
+    background-color: $color;
+}

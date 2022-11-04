@@ -1,0 +1,44 @@
+$white: #ffffff;
+$black-one: #323232;
+$black-two: #2e2e2e;
+$primary-red: #e43c2f;
+$lightorange: #ffc107;
+$orange: #ff7100;
+$primary-green: #15cc35;
+$secondary-green: #00b96e;
+$darkslateblue: #33495f;
+$darkgrey-one: #8f929d;
+$darkgrey-two: #4c4f59;
+$darkgrey-three: #8e8e93;
+$darkgrey-four: #484c51;
+$bluish-grey: #81869f;
+$lightgrey-one: #f9f9f9;
+$lightgrey-two: #a3a3a8;
+$purple: #9200ff;
+$darkyellow: #d0db00;
+$cyan: #00dcff;
+$primary-blue: #379aff;
+
+$textColors: (
+  "black-one": $black-one,
+  "black-two": $black-two,
+  "darkslateblue": $darkslateblue,
+  "darkgrey-one": $darkgrey-one,
+  "darkgrey-two": $darkgrey-two,
+  "darkgrey-three": $darkgrey-three,
+  "darkgrey-four": $darkgrey-four,
+  "bluish-grey": $bluish-grey,
+  "lightgrey-one": $lightgrey-one,
+  "lightgrey-two": $lightgrey-two,
+);
+
+$bgColors: (
+  "primary-green": $primary-green,
+  "secondary-green": $secondary-green,
+  "darkslateblue": $darkslateblue,
+  "primary-red": $primary-red,
+  "lightorange": $lightorange,
+  "lightgrey-one": $lightgrey-one,
+  "white": $white,
+);
+
