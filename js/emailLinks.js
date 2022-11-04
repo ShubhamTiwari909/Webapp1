@@ -1,6 +1,6 @@
-const emailLinks = document.getElementById("email-links");
-const input = document.getElementById('email-search');
-const textOne = document.getElementById("text-email")
+let emailLinks = document.getElementById("email-links");
+let input = document.getElementById('email-search');
+let textOne = document.getElementById("text-email")
 
 import { sortBtn } from './dom-loader';
 import mailIconSrc from '../Images/mail-icon.png';
@@ -105,7 +105,7 @@ let buttonElements = () => {
     }
   }) : buttons;
 
-  const showButtons = sorted.map(btn => {
+  let showButtons = sorted.map(btn => {
     return (
       `
             <div class="flex justify-between px-8 py-5 ${btn.read === 1 ? "bg-white" : "bg-gray-100/50"} 
@@ -138,7 +138,7 @@ let buttonElements = () => {
 
 }
 
-const setItem = (value) => {
+let setItem = (value) => {
   let setRead = buttons.map(btn => {
     if (btn.id === value) {
       if (btn.active === "inactive") {
