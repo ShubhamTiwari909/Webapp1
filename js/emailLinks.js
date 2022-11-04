@@ -131,7 +131,7 @@ var buttonElements = () => {
   for (var i = 0; i < buttons.length; i++) {
     var btns = document.getElementById(`btn-${i}`);
     btns.addEventListener("click", function () {
-      setItem(i)
+      // setItem(i)
       // emailFormat(i)
     })
   }
