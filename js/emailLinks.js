@@ -1,6 +1,6 @@
-var emailLinks = document.getElementById("email-links");
-var input = document.getElementById('email-search');
-var textOne = document.getElementById("text-email")
+let emailLinks = document.getElementById("email-links");
+let input = document.getElementById('email-search');
+let textOne = document.getElementById("text-email")
 
 import { sortBtn } from './dom-loader';
 import mailIconSrc from '../Images/mail-icon.png';
@@ -14,10 +14,10 @@ import pdfIconSrc from '../Images/group-13.png';
 import buttons from './buttons.json'
 import data from './emaildata.json'
 
-var sortValue = 0;
+let sortValue = 0;
 
-var emailFormat = (value) => {
-  var newText = data.filter(function (item) {
+let emailFormat = (value) => {
+  let newText = data.filter(function (item) {
     return item.id === value
   }).map(item => {
     return `    
@@ -38,7 +38,7 @@ var emailFormat = (value) => {
         <a href="javascript:void(0)" class="flex"><img src="${tagIconSrc}" class="img-fluid" /></a>
       </div>
       <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex" id="devare-email-${item.id}" ><img src="${trashIconSrc}" class="img-fluid" /></a>
+        <a href="javascript:void(0)" class="flex" id="delete-email-${item.id}" ><img src="${trashIconSrc}" class="img-fluid" /></a>
       </div>
     </div>
     <div class="mt-10 ml-6 mt-10">
@@ -86,9 +86,9 @@ var emailFormat = (value) => {
 
 }
 
-var buttonElements = () => {
-  var sortedArray = [...buttons]
-  var sorted = sortValue !== 0 ? sortedArray.sort((a, b) => {
+let buttonElements = () => {
+  let sortedArray = [...buttons]
+  let sorted = sortValue !== 0 ? sortedArray.sort((a, b) => {
     if (sortValue === 1) {
       return b.read - a.read;
     }
@@ -97,7 +97,7 @@ var buttonElements = () => {
     }
   }) : buttons;
 
-  var showButtons = sorted.map(btn => {
+  let showButtons = sorted.map(btn => {
     return (
       `
             <div class="flex justify-between px-8 py-5 ${btn.read === 1 ? "bg-white" : "bg-gray-100/50"} 
@@ -120,8 +120,8 @@ var buttonElements = () => {
   emailLinks.innerHTML = showButtons;
 
 
-  for (var i = 0; i < buttons.length; i++) {
-    var btns = document.getElementById(`btn-${i}`);
+  for (let i = 0; i < buttons.length; i++) {
+    let btns = document.getElementById(`btn-${i}`);
     btns.addEventListener("click", function () {
       setItem(i)
       emailFormat(i)
@@ -130,14 +130,14 @@ var buttonElements = () => {
 
 }
 
-var setItem = (value) => {
-  var setRead = buttons.map(btn => {
+let setItem = (value) => {
+  let setRead = buttons.map(btn => {
     if (btn.id === value) {
       if (btn.active === "inactive") {
-        return { ...btn,read:1, active: "active" };
+        return { ...btn, read: 1, active: "active" };
       }
       else {
-        return { ...btn,read:1, active: "inactive" };
+        return { ...btn, read: 1, active: "inactive" };
       }
     }
     return btn
@@ -152,13 +152,13 @@ buttonElements()
 function search_email() {
   input.value = input.value.toLowerCase();
 
-  var btns = [];
-  var items = []
-  for (var i = 0; i < buttons.length; i++) {
+  let btns = [];
+  let items = []
+  for (let i = 0; i < buttons.length; i++) {
     btns.push(document.getElementById(`btn-${i}`));
     items.push(document.getElementById(`item-${i}`));
   }
-  for (var i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
     if (!btns[i].innerText.toLowerCase().includes(input.value)) {
       items[i].style.display = "none";
     }
