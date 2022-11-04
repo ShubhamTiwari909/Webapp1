@@ -132,7 +132,7 @@ var buttonElements = () => {
     var btns = document.getElementById(`btn-${i}`);
     btns.addEventListener("click", function () {
       setItem(i)
-      emailFormat(i)
+      // emailFormat(i)
     })
   }
 
