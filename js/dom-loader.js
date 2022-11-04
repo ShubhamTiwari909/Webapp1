@@ -1,6 +1,6 @@
-export const logo = document.getElementById("logo");
-export const draftlogo = document.getElementById("draftlogo");
-export const morelogo = document.getElementById("morelogo");
-export const sortBtn = document.getElementById("sort-btn");
-export const userProfileLogo = document.getElementById("user-profile-logo");
-export const mailIcon = document.getElementById("mail-icon");
+export let logo = document.getElementById("logo");
+export let draftlogo = document.getElementById("draftlogo");
+export let morelogo = document.getElementById("morelogo");
+export let sortBtn = document.getElementById("sort-btn");
+export let userProfileLogo = document.getElementById("user-profile-logo");
+export let mailIcon = document.getElementById("mail-icon");
