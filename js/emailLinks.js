@@ -83,15 +83,7 @@ var emailFormat = (value) => {
 
 
   textOne.innerHTML = newText
-  for (var i = 0; i < data.length; i++) {
-    var devareEmail = document.getElementById(`devare-email-${i}`);
 
-    if (devareEmail !== null) {
-      devareEmail.addEventListener("click", function () {
-        devareItem(i)
-      })
-    }
-  }
 }
 
 var buttonElements = () => {
@@ -131,7 +123,7 @@ var buttonElements = () => {
   for (var i = 0; i < buttons.length; i++) {
     var btns = document.getElementById(`btn-${i}`);
     btns.addEventListener("click", function () {
-      // setItem(i)
+      setItem(i)
       emailFormat(i)
     })
   }
