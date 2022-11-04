@@ -133,16 +133,24 @@ let buttonElements = () => {
 let setItem = (value) => {
   let setRead = buttons.map(btn => {
     if (btn.id === value) {
-      if (btn.active === "inactive") {
-        return { ...btn, read: 1, active: "active" };
-      }
-      else {
-        return { ...btn, read: 1, active: "inactive" };
-      }
+      return { ...btn, read: 1 };
     }
     return btn
   })
+ 
   buttons = setRead;
+  let setActive = buttons.map(btn => {
+    if (btn.id === value) {
+      if (btn.active === "inactive") {
+        return { ...btn, active: "active" };
+      }
+      else {
+        return { ...btn, active: "inactive" };
+      }
+    }
+    return {...btn,active: "inactive"};
+  })
+  buttons = setActive
   buttonElements()
 }
 
