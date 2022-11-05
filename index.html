@@ -29,7 +29,7 @@
       <img id="logo" />
     </header>
     <main class="flex">
-      <section class="flex-3 pt-8 pl-7 pb-3 h-144 overflow-auto">
+      <section class="flex-3 pt-8 pl-7 pb-12 h-screen overflow-auto">
         <button
           class="px-5 py-3 rounded-3xl bg-secondary-green text-white flex items-center"
         >
@@ -119,7 +119,8 @@
           </div>
         </div>
       </section>
-      <section class="flex-5 pt-8 bg-gray-100/50 h-144 overflow-auto">
+      <!-- Email buttons sections and search bar -->
+      <section class="flex-5 pt-8 pb-12 bg-gray-100/50">
         <label class="relative block px-7">
           <span class="sr-only">Search</span>
           <i
@@ -136,7 +137,7 @@
         <div class="flex justify-between items-center mt-5 px-8">
           <p class="text-2xl text-slate-700">Inbox</p>
           <select
-            class="text-sm text-slate-700 bg-transparent outline-none"
+            class="text-sm text-slate-700 bg-transparent outline-none cursor-pointer"
             id="sort-btn"
           >
             <option value="0">
@@ -150,9 +151,9 @@
             </option>
           </select>
         </div>
-        <div id="email-links" class="mt-10 flex flex-col gap-10"></div>
+        <div id="email-links" class="mt-10 flex flex-col gap-10 h-mid-screen overflow-auto"></div>
       </section>
-      <section class="flex-8 pl-7 pb-3 h-144 overflow-auto">
+      <section class="flex-8 pl-7 pb-12 h-screen">
         <div id="text-email"></div>
       </section>
     </main>

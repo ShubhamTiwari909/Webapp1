@@ -21,7 +21,7 @@ let emailFormat = (value) => {
     return item.id === value
   }).map(item => {
     return `    
-    <div class="flex gap-8 ml-6 mt-10">
+    <div class="flex gap-8 ml-6 my-5">
       <div class="px-4 py-5 rounded-full border-2 border-gray-400">
         <a href="javascript:void(0)" class="flex"><img src="${mailIconSrc}" class="img-fluid" /></a>
       </div>
@@ -41,6 +41,7 @@ let emailFormat = (value) => {
         <a href="javascript:void(0)" class="flex" id="delete-email-${item.id}" ><img src="${trashIconSrc}" class="img-fluid" /></a>
       </div>
     </div>
+    <div class="h-mid-screen overflow-auto"> 
     <div class="mt-10 ml-6 mt-10">
       <h2 class="text-slate-600 text-3xl font-light">${item.title}</h2>
       <div class="mt-8 flex gap-2">
@@ -78,6 +79,7 @@ let emailFormat = (value) => {
   <i class="fa-solid fa-share mr-2"></i>
     Forward
   </button>
+    </div>
     </div>`
   })
 
@@ -100,7 +102,7 @@ let buttonElements = () => {
   let showButtons = sorted.map(btn => {
     return (
       `
-            <div class="flex justify-between px-8 py-5 ${btn.read === 1 ? "bg-white" : "bg-gray-100/50"} 
+            <div class="flex justify-between px-8 py-5 bg-gray-100/50 hover:bg-white cursor-pointer
             ${btn.active === "inactive" ? "border-none" : "border-l-4 border-blue-500/80"}" id="item-${btn.id}">
             <div class="flex items-baseline gap-1 relative">
             <span class="inline-block absolute top-2 -left-4 w-2 h-2 rounded-full bg-blue-600 mr-1 ${btn.read === 1 ? "hidden" : "inline-block"}"></span>
@@ -121,7 +123,7 @@ let buttonElements = () => {
 
 
   for (let i = 0; i < buttons.length; i++) {
-    let btns = document.getElementById(`btn-${i}`);
+    let btns = document.getElementById(`item-${i}`);
     btns.addEventListener("click", function () {
       setItem(i)
       emailFormat(i)
@@ -137,7 +139,7 @@ let setItem = (value) => {
     }
     return btn
   })
- 
+
   buttons = setRead;
   let setActive = buttons.map(btn => {
     if (btn.id === value) {
@@ -148,7 +150,7 @@ let setItem = (value) => {
         return { ...btn, active: "inactive" };
       }
     }
-    return {...btn,active: "inactive"};
+    return { ...btn, active: "inactive" };
   })
   buttons = setActive
   buttonElements()
