@@ -6,6 +6,7 @@
         "email":"shubham-01@gmail.com",
         "sender":"Salman Shah",
         "attachment":false,
+        "time": "8:00 PM, today",
         "profile":"https://cdn-icons-png.flaticon.com/512/219/219983.png",
         "text":"\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu\n\n"
     },
@@ -16,6 +17,7 @@
         "email":"chritian.bale@gmail.com",
         "sender":"Salman Shah",
         "attachment":true,
+        "time": "11:00 AM, today",
         "profile":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0cYTihODeLNTSImny5ABxWFHWZZ2D6PxD6JjdH8lCvLty9NQ__uQblYqMsRw8V-SWpt8&usqp=CAU",
         "text":"\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu\n\n"
     },
@@ -26,6 +28,7 @@
         "email":"shubham-02@gmail.com",
         "sender":"Aisha Dalo",
         "attachment":false,
+        "time": "12:05 PM, today",
         "profile":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh3M4ZjsouiqvqWgiu8CaHPvhB9ej2vdA3rnigVf9IfvTbwTqNMyXepdQwAksjMP9RJHE&usqp=CAU",
         "text":"\nIt is a long established fact that a reader will be distracted by the\n readable content of a page when looking at its layout. The point of\n using Lorem Ipsum is that it has a more-or-less normal distribution\n of letters, as opposed to using 'Content here, content here'\n, making it look like readable English. Many desktop publishing\n packages and web page editors now use Lorem Ipsum as their\n default model text, and a search for 'lorem ipsum'\n\n"
     },
@@ -36,6 +39,7 @@
         "email":"shubham-03@gmail.com",
         "sender":"Netflix",
         "attachment":false,
+        "time": "7:35 PM, today",
         "profile":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsIsIKGP2zeO1K4eTNYtEc9tOLDF99xfihwScH4U9WVcrBgRqYM2PRDWeN8bWjxap2cC4&usqp=CAU",
         "text":"\nLorem Ipsum as their default model text, and a search for 'lorem ipsum'\n will uncover many web sites still in their infancy. Various versions\n have evolved over the years, sometimes by accident,\n sometimes on purpose (injected humour and the like)\n\n"
     },
@@ -46,6 +50,7 @@
         "email":"shubham-04@gmail.com",
         "sender":"TechCrunch",
         "attachment":false,
+        "time": "5:10 PM, Yesterday",
         "profile":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa8P6ddTVwFEYX1Ee2AwSE_iAf6vsInThMx5tBD9CRzhruR90cPeR-jJyaAO8H8stYmQg&usqp=CAU",
         "text":"\nContrary to popular belief, Lorem Ipsum is not simply random text.\n It has roots in a piece of classical Latin literature from 45 BC,\n making it over 2000 years old. Richard McClintock, a Latin professor\n at Hampden-Sydney College in Virginia, looked up one of the more obscure\n Latin words, consectetur, from a Lorem Ipsum passage, and\n going through the cites of the word in classical literature\n\n"
     },
@@ -56,6 +61,7 @@
         "email":"shubham-05@gmail.com",
         "sender":"Goodreads",
         "attachment":false,
+        "time": "2:00 PM, Yesterday",
         "profile":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5W-3fSGOIcgkl-Z0fFhkIQirjrBHZ2SBct4ZuJ5k9rqe6iWClEGIHgLee0zoCvlhs8KE&usqp=CAU",
         "text":"\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,\n when an unknown printer took a galley of type and scrambled it to make\n a type specimen book. It has survived not only five centuries, but also\n the leap into electronic typesetting, remaining essentially unchanged.\n\n"
     },
@@ -66,6 +72,7 @@
         "email":"shubham-06@gmail.com",
         "sender":"Infosys",
         "attachment":false,
+        "time": "10:05 AM, 9 Oct, 16",
         "profile":"https://cdn-icons-png.flaticon.com/512/219/219983.png",
         "text":"\nThere are many variations of passages of Lorem Ipsum available,\n but the majority have suffered alteration in some form,\n by injected humour, or randomised words which don't look even slightly believable.\n If you are going to use a passage of Lorem Ipsum, you need to be sure\n there isn't anything embarrassing hidden in the middle of text.\n\n"
     }

@@ -8,7 +8,8 @@ tailwind.config = {
         '8': '8 8 0%'
       },
       height: {
-        'mid-screen': '68vh',
+        'mid-screen-1': '68vh',
+        'mid-screen-2': '78vh',
         '144': '36rem',
         '120': '30rem',
       },

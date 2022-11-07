@@ -21,30 +21,31 @@ let emailFormat = (value) => {
     return item.id === value
   }).map(item => {
     return `    
-    <div class="flex gap-8 ml-6 my-5">
+    <div class="flex gap-3 ml-6 mt-5">
       <div class="px-4 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${mailIconSrc}" class="img-fluid" /></a>
+        <a href="javascript:void(0)" class="flex"><img src="${mailIconSrc}" class="w-7" /></a>
       </div>
       <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${slideBoxIconSrc}" class="img-fluid" /></a>
+        <a href="javascript:void(0)" class="flex"><img src="${slideBoxIconSrc}" class="w-5" /></a>
       </div>
       <div class="px-6 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${clockIconSrc}" class="img-fluid" /></a>
+        <a href="javascript:void(0)" class="flex"><img src="${clockIconSrc}" class="w-4" /></a>
       </div>
       <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${barIconSrc}" class="img-fluid" /></a>
+        <a href="javascript:void(0)" class="flex"><img src="${barIconSrc}" class="w-5 h-4" /></a>
       </div>
       <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${tagIconSrc}" class="img-fluid" /></a>
+        <a href="javascript:void(0)" class="flex"><img src="${tagIconSrc}" class="w-5" /></a>
       </div>
-      <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex" id="delete-email-${item.id}" ><img src="${trashIconSrc}" class="img-fluid" /></a>
+      <div class="px-6 py-5 rounded-full border-2 border-gray-400">
+        <a href="javascript:void(0)" class="flex" id="delete-email-${item.id}" ><img src="${trashIconSrc}" class="w-4" /></a>
       </div>
     </div>
-    <div class="h-mid-screen overflow-auto"> 
-    <div class="mt-10 ml-6 mt-10">
+    <div class="h-mid-screen-2 overflow-auto"> 
+    <div class="mt-8 ml-6">
       <h2 class="text-slate-600 text-3xl font-light">${item.title}</h2>
-      <div class="mt-8 flex gap-2">
+      <div class="flex justify-between items-center pr-6">
+       <div class="mt-8 flex gap-2">
         <img class="w-12 h-12 rounded-full" src="${item.profile}" />
         <div>
         <a href="javascript:void(0)> class="text-slate-600 text-xl">${item.username}</a>
@@ -52,6 +53,8 @@ let emailFormat = (value) => {
             From: <span><a href="javascript:void(0) class="text-slate-700>${item.email}</a></span>
           </p>
         </div>
+       </div>
+       <p class="text-slate-800 opacity-30 text-sm">${item.time}</p>
       </div>
     </div>
     <div class="mt-8 ml-6">
@@ -62,19 +65,19 @@ let emailFormat = (value) => {
       <p class="text-md text-slate-600 mt-8">Cheers</p>
     </div>
 
-    <div class="mt-20 mx-8 gap-2 p-3 rounded-lg border-2 border-gray-200 w-40 ${item.attachment ? "flex" : "hidden"}">
+    <div class="mt-8 mx-8 gap-2 p-3 rounded-lg border-2 border-gray-200 w-40 ${item.attachment ? "flex" : "hidden"}">
      <img src="${pdfIconSrc}" />
       <p class="self-end text-slate-800 opacity-50 text-xs">Sample.pdf</p>
     </div>
-    <div class="flex gap-5 mt-14 mx-8">
+    <div class="flex gap-5 mt-8 mx-8">
       <button
-      class="px-10 py-4 rounded-3xl bg-green-600 text-white flex items-center"
+      class="px-10 py-4 rounded-full bg-green-600 text-white flex items-center"
     >
     <i class="fa-sharp fa-solid fa-reply mr-2"></i>
       Reply
     </button>
     <button
-    class="px-10 py-4 rounded-3xl bg-gray-100 text-slate-400 flex items-center"
+    class="px-10 py-4 rounded-full bg-gray-100 text-slate-400 flex items-center"
   >
   <i class="fa-solid fa-share mr-2"></i>
     Forward
@@ -90,20 +93,22 @@ let emailFormat = (value) => {
 
 let buttonElements = () => {
   let sortedArray = [...buttons]
-  let sorted = sortValue !== 0 ? sortedArray.sort((a, b) => {
+
+  let sorted = sortValue !== 0 ? sortedArray.filter((item) => {
     if (sortValue === 1) {
-      return b.read - a.read;
+      return item.read === 2
     }
     else {
-      return a.read - b.read
+      return item.read === 1
     }
   }) : buttons;
+
 
   let showButtons = sorted.map(btn => {
     return (
       `
-            <div class="flex justify-between px-8 py-5 bg-gray-100/50 hover:bg-white cursor-pointer
-            ${btn.active === "inactive" ? "border-none" : "border-l-4 border-blue-500/80"}" id="item-${btn.id}">
+            <div class="flex justify-between px-8 py-5 bg-gray-100/50 hover:bg-white cursor-pointer relative" id="item-${btn.id}">
+            <span class="w-1 h-24  ${btn.active === "inactive" ? 'display:none' : 'bg-blue-500/80'} absolute left-0 top-0"></span>
             <div class="flex items-baseline gap-1 relative">
             <span class="inline-block absolute top-2 -left-4 w-2 h-2 rounded-full bg-blue-600 mr-1 ${btn.read === 1 ? "hidden" : "inline-block"}"></span>
             <div>
@@ -124,30 +129,24 @@ let buttonElements = () => {
 
   for (let i = 0; i < buttons.length; i++) {
     let btns = document.getElementById(`item-${i}`);
-    btns.addEventListener("click", function () {
-      setItem(i)
-      emailFormat(i)
-    })
-  }
+    if (btns !== null) {
+      btns.addEventListener("click", function () {
+        setItem(i)
+        emailFormat(i)
+      })
+    }
 
+  }
 }
 
 let setItem = (value) => {
-  let setRead = buttons.map(btn => {
-    if (btn.id === value) {
-      return { ...btn, read: 1 };
-    }
-    return btn
-  })
-
-  buttons = setRead;
   let setActive = buttons.map(btn => {
     if (btn.id === value) {
       if (btn.active === "inactive") {
-        return { ...btn, active: "active" };
+        return { ...btn, read: 1, active: "active" };
       }
       else {
-        return { ...btn, active: "inactive" };
+        return { ...btn, read: 1, active: "inactive" }
       }
     }
     return { ...btn, active: "inactive" };
@@ -155,7 +154,6 @@ let setItem = (value) => {
   buttons = setActive
   buttonElements()
 }
-
 
 buttonElements()
 
