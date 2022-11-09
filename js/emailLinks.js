@@ -3,12 +3,6 @@ let input = document.getElementById('email-search');
 let textOne = document.getElementById("text-email")
 
 import { sortBtn } from './dom-loader';
-import mailIconSrc from '../Images/mail-icon.png';
-import slideBoxIconSrc from '../Images/slide-box-icon.png';
-import clockIconSrc from '../Images/clock-icon.png';
-import barIconSrc from '../Images/bar-icon.png';
-import tagIconSrc from '../Images/tag-icon.png';
-import trashIconSrc from '../Images/trash-icon.png';
 import pdfIconSrc from '../Images/group-13.png';
 
 import buttons from './buttons.json'
@@ -22,23 +16,42 @@ let emailFormat = (value) => {
   }).map(item => {
     return `    
     <div class="flex gap-3 ml-6 mt-5">
-      <div class="px-4 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${mailIconSrc}" class="w-7" /></a>
+      <div class="px-4 py-4 rounded-full border-2 border-gray-400">
+      <a href="javascript:void(0)" class="flex">
+       <svg class="icon" width="25" height="25">
+        <use xlink:href="#17952689171595156226"></use>
+       </svg>
+       </a>
       </div>
-      <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${slideBoxIconSrc}" class="w-5" /></a>
+      <div class="px-4 py-4 rounded-full border-2 border-gray-400">
+        <a href="javascript:void(0)" class="flex"><svg class="icon" width="25" height="25">
+        <use xlink:href="#21221211971579237607"></use>
+      </svg></a>
       </div>
-      <div class="px-6 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${clockIconSrc}" class="w-4" /></a>
+      <div class="px-4 py-4 rounded-full border-2 border-gray-400">
+        <a href="javascript:void(0)" class="flex">
+        <svg class="icon" width="25" height="25">
+         <use xlink:href="#19340781691553668338"></use>
+        </svg>
+        </a>
       </div>
-      <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${barIconSrc}" class="w-5 h-4" /></a>
+      <div class="px-4 py-4 rounded-full border-2 border-gray-400">
+        <a href="javascript:void(0)" class="flex">
+        <svg class="icon" width="25" height="25">
+        <use xlink:href="#12925564016366519195443"></use>
+      </svg></a>
       </div>
-      <div class="px-5 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex"><img src="${tagIconSrc}" class="w-5" /></a>
+      <div class="px-4 py-4 rounded-full border-2 border-gray-400">
+        <a href="javascript:void(0)" class="flex">
+        <svg class="icon" width="25" height="25">
+        <use xlink:href="#5027818751548336164"></use>
+      </svg></a>
       </div>
-      <div class="px-6 py-5 rounded-full border-2 border-gray-400">
-        <a href="javascript:void(0)" class="flex" id="delete-email-${item.id}" ><img src="${trashIconSrc}" class="w-4" /></a>
+      <div class="px-4 py-4 rounded-full border-2 border-gray-400">
+        <a href="javascript:void(0)" class="flex" id="delete-email-${item.id}" >
+        <svg class="icon" width="25" height="25">
+        <use xlink:href="#3682063881582863582"></use>
+      </svg></a>
       </div>
     </div>
     <div class="h-mid-screen-2 overflow-auto"> 
