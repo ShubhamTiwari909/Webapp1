@@ -13,8 +13,8 @@ module.exports = {
         open: true
     },
     output: {
-        path: `${__dirname}/dist`,
         filename: 'bundle.js',
+        path: `${__dirname}/dist`,
         assetModuleFilename: 'images/[hash][ext][query]'
     },
     module: {
