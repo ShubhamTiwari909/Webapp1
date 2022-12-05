@@ -20,15 +20,26 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-transform-runtime']
+                    }
+                }
+            },
+            {
+                test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
                     { loader: MiniCssExtractPlugin.loader },
                     'css-loader',
-                    'sass-loader',
+                    'postcss-loader',
                 ],
             },
-       
+
             {
                 test: /\.(png|jp(e*)g|svg)$/,
                 type: 'asset/resource',
@@ -55,5 +66,5 @@ module.exports = {
             path: `./.env`
         }),
     ],
-   
+
 };

@@ -1,5 +1,3 @@
-require('../sass/index.scss');
-require("./tailwind.config")
-
+require('../sass/index.css');
 require("./emailLinks")
 require("./image-bundler.js");
